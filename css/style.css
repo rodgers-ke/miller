@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06BBCC;
+    --primary: #B88900;
     --light: #F0FBFC;
     --dark: #181d38;
 }
@@ -77,15 +77,6 @@
 
 
 /*** Navbar ***/
-.logo-title {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    margin: 0;
-    color: #000000; /* Matches Bootstrap's primary color */
-    gap: 10px;
-  }
-  
   .logo-img {
     height: 84px;  /* Adjust to your preferred size */
     width: auto;
@@ -104,7 +95,7 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: #b3b1b1;
+    color: #FFFFFF;
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
@@ -446,4 +437,73 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+/* Make all buttons gold with white text */
+button,
+input[type="button"],
+input[type="submit"],
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-default,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+    background-color: var(--primary) !important; /* Gold */
+    color: var(--light) !important;              /* White text */
+    border-color: var(--primary) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+/* Hover state — darker gold with white text */
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-default:hover,
+.btn-success:hover,
+.btn-info:hover,
+.btn-warning:hover,
+.btn-danger:hover {
+    background-color: #B8860B !important;        /* Darker gold */
+    border-color: #B8860B !important;
+    color: var(--light) !important;
+}
+
+/* Force icons in service section to use black, not Bootstrap blue */
+.service-icons i,
+.service-icons .text-primary {
+    color: var(--dark) !important; /* Black */
+}
+
+/* Force gold on all .text-primary elements inside the carousel */
+.header-carousel .text-primary {
+    color: var(--primary) !important;
+}
+
+/* Force all .text-primary to use gold instead of Bootstrap's blue */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+    background-color: #a97a00 !important; /* Slightly darker gold */
+    border-color: #a97a00 !important;
 }
